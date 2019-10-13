@@ -1,0 +1,14 @@
+$headerColor: #ccc;
+$debugger: 1px dotted red;
+
+.header {
+  background-color: $headerColor;
+  padding: 10px;
+
+  >.header__container {
+    >.header__container--logo {
+      width: 50px;
+      overflow: hidden;
+    }
+  }
+}
