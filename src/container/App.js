@@ -1,8 +1,14 @@
 import React from "react";
-import "../assets/styles/app.css";
+import "../assets/styles/reset.scss";
+import "../assets/styles/header.scss";
+import Layout from "../components/layout/Layout";
 
 function App() {
-  return <div>This app is under construction.</div>;
+  return (
+    <div>
+      <Layout />
+    </div>
+  );
 }
 
 export default App;
