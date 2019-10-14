@@ -1,13 +1,16 @@
 import React from "react";
-import Header from "./../partials/Header";
-import Sidebar from "./../partials/Sidebar";
+import Header from "./../content/Header";
+import Sidebar from "./../content/Sidebar";
+import Container from "./../content/Container";
+import Footer from "./../content/Footer";
 
 function Layout() {
   return (
     <div>
       <Header />
-      <div>this is the layout</div>
+      <Container />
       <Sidebar />
+      <Footer />
     </div>
   );
 }
