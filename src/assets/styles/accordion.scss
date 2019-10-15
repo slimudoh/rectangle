@@ -1,0 +1,28 @@
+$accordionColor: #ddd;
+$debugger: 1px dotted red;
+
+.accordion {
+
+  >.accordion__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    border-bottom: 1px solid #ccc;
+
+    >div {
+      width: 100px;
+      height: 40px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      font-size: 12px;
+    }
+  }
+
+
+}
