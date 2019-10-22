@@ -1,10 +1,10 @@
 import React from "react";
 
-function Banner() {
+function Banner(props) {
   return (
     <div className="banner">
-      <div className="banner__name">kkgkg</div>
-      <div className="banner__view">kkgkg</div>
+      <div className="banner__name">{props.name}</div>
+      <div className="banner__view">{props.dimension}</div>
     </div>
   );
 }

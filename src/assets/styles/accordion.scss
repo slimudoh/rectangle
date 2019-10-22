@@ -11,17 +11,27 @@ $debugger: 1px dotted red;
     justify-content: flex-start;
     align-content: center;
     border-bottom: 1px solid #ccc;
+    overflow: hidden;
 
     >div {
       width: 100px;
       height: 40px;
-      border: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-left: 1px solid #ccc;
       display: flex;
       align-items: center;
       justify-content: center;
       align-content: center;
-      font-size: 12px;
+      font-size: 10px;
+      cursor: pointer;
     }
+  }
+
+  >.accordion__body {
+    height: 70vh;
+    overflow: auto;
+    padding-bottom: 50px;
   }
 
 

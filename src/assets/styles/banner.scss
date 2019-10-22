@@ -3,7 +3,7 @@ $bannerColor: #ddd;
 .banner {
     background-color: $bannerColor;
     padding: 0 10px;
-    margin: 5px 0;
+    margin-top: 5px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -11,14 +11,17 @@ $bannerColor: #ddd;
     align-items: center;
     justify-content: space-between;
     align-content: center;
+    overflow: hidden;
 
     >.banner__name {
         width: 200px;
-        border: 1px dotted red;
+        text-transform: capitalize;
+        font-size: 14px;
     }
 
     >.banner__view {
         width: 200px;
-        border: 1px dotted red;
+        text-align: right;
+        font-size: 14px;
     }
 }
