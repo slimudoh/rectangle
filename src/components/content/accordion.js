@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import Banner from "./banner";
+import Device from "./device";
+import iphoneDetails from "../../util/iphone";
+import samsungDetails from "../../util/samsung";
+import nexusDetails from "../../util/nexus";
 
 function Accordion() {
   const [iphone, setIphone] = useState(true);
@@ -48,25 +52,64 @@ function Accordion() {
       </div>
       {iphone ? (
         <div className="accordion__body">
-          <div>
-            <Banner name="iphone 4" dimension="320x480" />
-          </div>
+          {iphoneDetails.map((item, index) => {
+            return (
+              <div key={index}>
+                <Banner name={item.name} dimension="360x640" />
+                <div
+                  style={
+                    item.display === 1
+                      ? { display: "flex" }
+                      : { display: "none" }
+                  }
+                >
+                  <Device phone={item.image} alt={item.name} />
+                </div>
+              </div>
+            );
+          })}
         </div>
       ) : null}
 
       {samsung ? (
         <div className="accordion__body">
-          <div>
-            <Banner name="Galaxy Note 3" dimension="360x640" />
-          </div>
+          {samsungDetails.map((item, index) => {
+            return (
+              <div key={index}>
+                <Banner name={item.name} dimension="360x640" />
+                <div
+                  style={
+                    item.display === 1
+                      ? { display: "flex" }
+                      : { display: "none" }
+                  }
+                >
+                  <Device phone={item.image} alt={item.name} />
+                </div>
+              </div>
+            );
+          })}
         </div>
       ) : null}
 
       {nexus ? (
         <div className="accordion__body">
-          <div>
-            <Banner name="Nexus 4" dimension="384x640" />
-          </div>
+          {nexusDetails.map((item, index) => {
+            return (
+              <div key={index}>
+                <Banner name={item.name} dimension="360x640" />
+                <div
+                  style={
+                    item.display === 1
+                      ? { display: "flex" }
+                      : { display: "none" }
+                  }
+                >
+                  <Device phone={item.image} alt={item.name} />
+                </div>
+              </div>
+            );
+          })}
         </div>
       ) : null}
     </div>

@@ -1,0 +1,45 @@
+$deviceColor: #fff;
+
+.device {
+    background-color: $deviceColor;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: center;
+    overflow: hidden;
+
+    >.device__phone {
+        width: 40%;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        background: #ddd;
+
+        >div {
+            width: 250px;
+            margin: auto;
+            padding: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    >.device__details {
+        width: 60%;
+        padding: 0 10px;
+
+        >div {
+            background: #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            padding: 10px;
+        }
+    }
+}

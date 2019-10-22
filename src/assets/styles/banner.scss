@@ -3,7 +3,7 @@ $bannerColor: #ddd;
 .banner {
     background-color: $bannerColor;
     padding: 0 10px;
-    margin: 5px 0;
+    margin-top: 5px;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -11,7 +11,6 @@ $bannerColor: #ddd;
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    border-radius: 4px;
     overflow: hidden;
 
     >.banner__name {
