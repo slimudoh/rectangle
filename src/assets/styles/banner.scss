@@ -11,14 +11,18 @@ $bannerColor: #ddd;
     align-items: center;
     justify-content: space-between;
     align-content: center;
+    border-radius: 4px;
+    overflow: hidden;
 
     >.banner__name {
         width: 200px;
-        border: 1px dotted red;
+        text-transform: capitalize;
+        font-size: 14px;
     }
 
     >.banner__view {
         width: 200px;
-        border: 1px dotted red;
+        text-align: right;
+        font-size: 14px;
     }
 }
