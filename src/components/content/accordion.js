@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Banner from "./banner";
-import Device from "./device";
+import Banner from "./Banner";
+import Device from "./Device";
 import iphoneDetails from "../../util/iphone";
 import samsungDetails from "../../util/samsung";
 import nexusDetails from "../../util/nexus";

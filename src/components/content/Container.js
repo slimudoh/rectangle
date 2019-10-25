@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "./accordion";
+import Accordion from "./Accordion";
 
 function Header() {
   return (
