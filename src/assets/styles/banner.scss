@@ -12,6 +12,11 @@ $bannerColor: #ddd;
     justify-content: space-between;
     align-content: center;
     overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, .2);
+    }
 
     >.banner__name {
         width: 200px;

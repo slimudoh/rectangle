@@ -6,7 +6,7 @@ function Device(props) {
       <div className="device__phone">
         <div>
           <img
-            src={require("../../assets/devices/iphone/iphone5s.png")}
+            src={require("../../assets/devices/" + props.phone)}
             alt={props.alt}
           />
         </div>
