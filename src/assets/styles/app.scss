@@ -1,0 +1,194 @@
+$accordionColor: #ddd;
+$containerColor: #fff;
+$headerColor: #ccc;
+$logoColor: #000;
+$sidebarColor: #eee;
+$bannerColor: #ddd;
+$deviceColor: #fff;
+$footerColor: #eee;
+
+$debugger: 1px dotted red;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 1200px;
+  background-color: $headerColor;
+  padding: 0 20px;
+  z-index: 9;
+
+  >.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    height: 50px;
+
+    >.header__container--logo {
+      width: 200px;
+      overflow: hidden;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 25px;
+      color: $logoColor;
+    }
+  }
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-left: 220px;
+    padding-right: 20px;
+    padding-top: 70px;
+
+    >.container__content {
+        overflow: hidden;
+    }
+}
+
+.accordion {
+
+  >.accordion__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+
+    >div {
+      width: 100px;
+      height: 40px;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      font-size: 10px;
+      cursor: pointer;
+    }
+  }
+
+  >.accordion__body {
+    height: 70vh;
+    overflow: auto;
+    padding-bottom: 50px;
+  }
+}
+
+
+
+.banner {
+    background-color: $bannerColor;
+    padding: 0 10px;
+    margin-top: 5px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    >.banner__name {
+        width: 200px;
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
+    >.banner__view {
+        width: 200px;
+        text-align: right;
+        font-size: 14px;
+    }
+}
+
+
+
+.device {
+    background-color: $deviceColor;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: center;
+    overflow: hidden;
+
+    >.device__phone {
+        width: 40%;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        background: #ddd;
+
+        >div {
+            width: 250px;
+            margin: auto;
+            padding: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    >.device__details {
+        width: 60%;
+        padding: 0 10px;
+
+        >div {
+            background: #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            padding: 10px;
+        }
+    }
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background: $footerColor;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    padding: 0 20px;
+    font-size: 12px;
+    color: #000;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: $sidebarColor;
+    padding-left: 20px;
+
+}
