@@ -1,20 +1,24 @@
 const nexusDetails = [
   {
-    name: "Nexus 4",
-    dimension: "384x640",
-    image: "../../assets/devices/iphone/iphone5s.png",
+    id: "0",
+    name: "iphone 5s",
+    dimensionWidth: "320",
+    dimensionHeight: "568",
+    image: "iphone/iphone5s.png",
+    display: 1
+  },
+  {
+    id: "1",
+    name: "iphone 5s",
+    dimension: "320x568",
+    image: "iphone/iphone5s.png",
     display: 0
   },
   {
-    name: "Nexus 4",
-    dimension: "384x640",
-    image: "../../assets/devices/iphone/iphone5s.png",
-    display: 0
-  },
-  {
-    name: "Nexus 4",
-    dimension: "384x640",
-    image: "../../assets/devices/iphone/iphone5s.png",
+    id: "2",
+    name: "iphone 5s",
+    dimension: "320x568",
+    image: "iphone/iphone5s.png",
     display: 0
   }
 ];

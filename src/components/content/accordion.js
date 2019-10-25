@@ -52,30 +52,26 @@ function Accordion() {
       </div>
       {iphone ? (
         <div className="accordion__body">
-          {iphoneDetails.map((item, index) => {
-            return (
-              <div key={index}>
-                <Banner name={item.name} dimension="360x640" />
-                <div
-                  style={
-                    item.display === 1
-                      ? { display: "flex" }
-                      : { display: "none" }
-                  }
-                >
-                  <Device phone={item.image} alt={item.name} />
-                </div>
+          {iphoneDetails.map(item => (
+            <div key={item.id}>
+              <Banner name={item.name} dimension="360x640" />
+              <div
+                style={
+                  item.display === 1 ? { display: "flex" } : { display: "none" }
+                }
+              >
+                <Device phone={item.image} alt={item.name} />
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       ) : null}
 
       {samsung ? (
         <div className="accordion__body">
-          {samsungDetails.map((item, index) => {
+          {samsungDetails.map(item => {
             return (
-              <div key={index}>
+              <div key={item.id}>
                 <Banner name={item.name} dimension="360x640" />
                 <div
                   style={
@@ -94,9 +90,9 @@ function Accordion() {
 
       {nexus ? (
         <div className="accordion__body">
-          {nexusDetails.map((item, index) => {
+          {nexusDetails.map(item => {
             return (
-              <div key={index}>
+              <div key={item.id}>
                 <Banner name={item.name} dimension="360x640" />
                 <div
                   style={
