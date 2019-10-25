@@ -5,7 +5,7 @@ const iphoneDetails = [
     dimensionWidth: "320",
     dimensionHeight: "568",
     image: "iphone/iphone5s.png",
-    display: 1
+    display: 0
   },
   {
     id: "1",
