@@ -52,15 +52,19 @@ function Accordion() {
       </div>
       {iphone ? (
         <div className="accordion__body">
-          {iphoneDetails.map(item => (
-            <div key={item.id}>
+          {iphoneDetails.map((item, index) => (
+            <div key={index}>
               <Banner name={item.name} dimension="360x640" />
               <div
                 style={
                   item.display === 1 ? { display: "flex" } : { display: "none" }
                 }
               >
-                <Device phone={item.image} alt={item.name} />
+                <Device
+                  dimensions={item.dimensions}
+                  colors={item.colors}
+                  views={item.views}
+                />
               </div>
             </div>
           ))}
@@ -69,10 +73,10 @@ function Accordion() {
 
       {samsung ? (
         <div className="accordion__body">
-          {samsungDetails.map(item => {
+          {samsungDetails.map((item, index) => {
             return (
-              <div key={item.id}>
-                <Banner name={item.name} dimension="360x640" />
+              <div key={index}>
+                {/* <Banner name={item.name} dimension="360x640" />
                 <div
                   style={
                     item.display === 1
@@ -81,7 +85,7 @@ function Accordion() {
                   }
                 >
                   <Device phone={item.image} alt={item.name} />
-                </div>
+                </div> */}
               </div>
             );
           })}
@@ -90,10 +94,10 @@ function Accordion() {
 
       {nexus ? (
         <div className="accordion__body">
-          {nexusDetails.map(item => {
+          {nexusDetails.map((item, index) => {
             return (
-              <div key={item.id}>
-                <Banner name={item.name} dimension="360x640" />
+              <div key={index}>
+                {/* <Banner name={item.name} dimension="360x640" />
                 <div
                   style={
                     item.display === 1
@@ -102,7 +106,7 @@ function Accordion() {
                   }
                 >
                   <Device phone={item.image} alt={item.name} />
-                </div>
+                </div> */}
               </div>
             );
           })}

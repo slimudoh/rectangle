@@ -1,25 +1,18 @@
 const iphoneDetails = [
   {
-    id: "0",
     name: "iphone 5s",
-    dimensionWidth: "320",
-    dimensionHeight: "568",
-    image: "iphone/iphone5s.png",
-    display: 0
-  },
-  {
-    id: "1",
-    name: "iphone 5s",
-    dimension: "320x568",
-    image: "iphone/iphone5s.png",
-    display: 0
-  },
-  {
-    id: "2",
-    name: "iphone 5s",
-    dimension: "320x568",
-    image: "iphone/iphone5s.png",
-    display: 0
+    dimensions: {
+      screenWidth: "320px",
+      screenHeight: "568px",
+      deviceWidth: "420px",
+      deviceHeight: "668px"
+    },
+    colors: [
+      { name: "white", color: "#fff" },
+      { name: "black", color: "#000" }
+    ],
+    views: ["protrait", "Landscape"],
+    display: 1
   }
 ];
 
