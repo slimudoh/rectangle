@@ -1,29 +1,18 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 
 function Device(props) {
-  const [deviceColor, setDeviceColor] = useState("#000");
-  const phoneRef = useRef(null);
-  const screenRef = useRef(null);
-
-  const newColor = event => {
-    setDeviceColor(event.target.value);
-  };
-
   return (
     <div className="device">
       <div className="device__phone">
         <div
           className="device__phone--device"
-          ref={phoneRef}
           style={{
             width: props.dimensions.deviceWidth,
-            height: props.dimensions.deviceHeight,
-            backgroundColor: deviceColor
+            height: props.dimensions.deviceHeight
           }}
         >
           <div
             className="device__phone--screen"
-            ref={screenRef}
             style={{
               width: props.dimensions.screenWidth,
               height: props.dimensions.screenHeight

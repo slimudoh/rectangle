@@ -9,6 +9,7 @@ function Accordion() {
   const [iphone, setIphone] = useState(true);
   const [samsung, setSamsung] = useState(false);
   const [nexus, setNexus] = useState(false);
+  const [iphoneArr, setIphoneArr] = useState([...iphoneDetails]);
 
   const showIphone = () => {
     setIphone(true);
@@ -26,6 +27,18 @@ function Accordion() {
     setIphone(false);
     setSamsung(false);
     setNexus(true);
+  };
+
+  const displayIphone = index => {
+    if (iphoneArr[index].display === 0) {
+      const newArr = [...iphoneArr];
+      newArr[index].display = 1;
+      setIphoneArr([...newArr]);
+    } else if (iphoneArr[index].display === 1) {
+      const newArr = [...iphoneArr];
+      newArr[index].display = 0;
+      setIphoneArr([...newArr]);
+    }
   };
 
   return (
@@ -52,9 +65,15 @@ function Accordion() {
       </div>
       {iphone ? (
         <div className="accordion__body">
-          {iphoneDetails.map((item, index) => (
+          {iphoneArr.map((item, index) => (
             <div key={index}>
-              <Banner name={item.name} dimension="360x640" />
+              <div
+                onClick={() => {
+                  displayIphone(index);
+                }}
+              >
+                <Banner name={item.name} dimension="360x640" />
+              </div>
               <div
                 style={
                   item.display === 1 ? { display: "flex" } : { display: "none" }
