@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Device(props) {
-  const [deviceColor, setDeviceColor] = useState("#000");
-
   return (
     <div className="device">
       <div className="device__phone">
@@ -10,8 +8,7 @@ function Device(props) {
           className="device__phone--device"
           style={{
             width: props.dimensions.deviceWidth,
-            height: props.dimensions.deviceHeight,
-            backgroundColor: deviceColor
+            height: props.dimensions.deviceHeight
           }}
         >
           <div
@@ -31,29 +28,6 @@ function Device(props) {
             ></iframe>
           </div>
         </div>
-        <div className="device__phone--dropdown">
-          <div className="device__phone--dropdown-view">
-            <select>
-              {props.views.map((item, index) => (
-                <option key={index} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="device__phone--dropdown-colors">
-            <select>
-              {props.colors.map((item, index) => (
-                <option key={index} value={item.color}>
-                  {item.name}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-      </div>
-      <div className="device__details">
-        <div>hhh</div>
       </div>
     </div>
   );

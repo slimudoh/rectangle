@@ -7,11 +7,6 @@ const iphoneDetails = [
       deviceWidth: "420px",
       deviceHeight: "668px"
     },
-    colors: [
-      { name: "white", color: "#fff" },
-      { name: "black", color: "#000" }
-    ],
-    views: ["protrait", "Landscape"],
     display: 1
   }
 ];
