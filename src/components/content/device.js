@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 function Device(props) {
   const [deviceColor, setDeviceColor] = useState("#000");
+  const phoneRef = useRef(null);
+  const screenRef = useRef(null);
+
+  const newColor = event => {
+    setDeviceColor(event.target.value);
+  };
 
   return (
     <div className="device">
       <div className="device__phone">
         <div
           className="device__phone--device"
+          ref={phoneRef}
           style={{
             width: props.dimensions.deviceWidth,
             height: props.dimensions.deviceHeight,
@@ -16,6 +23,7 @@ function Device(props) {
         >
           <div
             className="device__phone--screen"
+            ref={screenRef}
             style={{
               width: props.dimensions.screenWidth,
               height: props.dimensions.screenHeight
@@ -31,29 +39,6 @@ function Device(props) {
             ></iframe>
           </div>
         </div>
-        <div className="device__phone--dropdown">
-          <div className="device__phone--dropdown-view">
-            <select>
-              {props.views.map((item, index) => (
-                <option key={index} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="device__phone--dropdown-colors">
-            <select>
-              {props.colors.map((item, index) => (
-                <option key={index} value={item.color}>
-                  {item.name}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-      </div>
-      <div className="device__details">
-        <div>hhh</div>
       </div>
     </div>
   );
