@@ -8,6 +8,7 @@ import nexusDetails from "../../util/nexus";
 function Accordion() {
   const [iphone, setIphone] = useState(true);
   const [samsung, setSamsung] = useState(false);
+  const [lg, setLg] = useState(false);
   const [nexus, setNexus] = useState(false);
   const [iphoneArr, setIphoneArr] = useState([...iphoneDetails]);
 
@@ -15,21 +16,35 @@ function Accordion() {
     setIphone(true);
     setSamsung(false);
     setNexus(false);
+    setLg(false);
   };
 
   const showSamsung = () => {
     setIphone(false);
     setSamsung(true);
     setNexus(false);
+    setLg(false);
+  };
+
+  const showLg = () => {
+    setIphone(false);
+    setSamsung(false);
+    setNexus(false);
+    setLg(true);
   };
 
   const showNexus = () => {
     setIphone(false);
     setSamsung(false);
     setNexus(true);
+    setLg(false);
   };
 
   const displayIphone = index => {
+    for (let num in iphoneArr) {
+      iphoneArr[num].display = 0;
+    }
+
     if (iphoneArr[index].display === 0) {
       const newArr = [...iphoneArr];
       newArr[index].display = 1;
@@ -57,6 +72,12 @@ function Accordion() {
           SAMSUNG
         </div>
         <div
+          onClick={showLg}
+          style={lg ? { backgroundColor: "#ccc", color: "#ffffff" } : null}
+        >
+          LG
+        </div>
+        <div
           onClick={showNexus}
           style={nexus ? { backgroundColor: "#ccc", color: "#ffffff" } : null}
         >
@@ -72,7 +93,7 @@ function Accordion() {
                   displayIphone(index);
                 }}
               >
-                <Banner name={item.name} dimension="360x640" />
+                <Banner name={item.name} size={item.size} />
               </div>
               <div
                 style={
@@ -91,6 +112,27 @@ function Accordion() {
       ) : null}
 
       {samsung ? (
+        <div className="accordion__body">
+          {samsungDetails.map((item, index) => {
+            return (
+              <div key={index}>
+                {/* <Banner name={item.name} dimension="360x640" />
+                <div
+                  style={
+                    item.display === 1
+                      ? { display: "flex" }
+                      : { display: "none" }
+                  }
+                >
+                  <Device phone={item.image} alt={item.name} />
+                </div> */}
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+
+      {lg ? (
         <div className="accordion__body">
           {samsungDetails.map((item, index) => {
             return (
