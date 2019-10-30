@@ -1,6 +1,6 @@
-const nexusDetails = [
+const lumiaDetails = [
   {
-    name: "Nexus",
+    name: "Lumia",
     size: "375 x 812",
     dimensions: {
       screenWidth: "375px",
@@ -12,4 +12,4 @@ const nexusDetails = [
   }
 ];
 
-export default nexusDetails;
+export default lumiaDetails;

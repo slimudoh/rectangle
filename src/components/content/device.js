@@ -20,7 +20,7 @@ function Device(props) {
           >
             <iframe
               title="myDevice"
-              src="https://hr360-dev.rovedana.com"
+              src="http://localhost:8080/overview"
               style={{
                 width: props.dimensions.screenWidth,
                 height: props.dimensions.screenHeight
