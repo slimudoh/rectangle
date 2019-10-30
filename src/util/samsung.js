@@ -1,24 +1,13 @@
 const samsungDetails = [
   {
-    id: "0",
-    name: "iphone 5s",
-    dimensionWidth: "320",
-    dimensionHeight: "568",
-    image: "iphone/iphone5s.png",
-    display: 1
-  },
-  {
-    id: "1",
-    name: "iphone 5s",
-    dimension: "320x568",
-    image: "iphone/iphone5s.png",
-    display: 0
-  },
-  {
-    id: "2",
-    name: "iphone 5s",
-    dimension: "320x568",
-    image: "iphone/iphone5s.png",
+    name: "Samsung",
+    size: "375 x 812",
+    dimensions: {
+      screenWidth: "375px",
+      screenHeight: "812px",
+      deviceWidth: "475px",
+      deviceHeight: "912px"
+    },
     display: 0
   }
 ];
