@@ -453,7 +453,11 @@ function Accordion() {
                   displayIphone(index);
                 }}
               >
-                <Banner name={item.name} size={item.size} />
+                <Banner
+                  name={item.name}
+                  size={item.size}
+                  display={item.display}
+                />
               </div>
               <div
                 style={
