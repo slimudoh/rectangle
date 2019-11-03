@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Banner from "./Banner";
-import Device from "./Device";
+import Banner from "../content/Banner";
+import Device from "../content/Device";
 import iphoneDetails from "../../util/iphone";
 import samsungDetails from "../../util/samsung";
 import lgDetails from "../../util/lg";
@@ -13,7 +13,7 @@ import sonyDetails from "../../util/sony";
 import xiaomiDetails from "../../util/xiaomi";
 import zteDetails from "../../util/zte";
 
-function Accordion() {
+function Windows() {
   const [iphone, setIphone] = useState(true);
   const [samsung, setSamsung] = useState(false);
   const [lg, setLg] = useState(false);
@@ -748,4 +748,4 @@ function Accordion() {
   );
 }
 
-export default Accordion;
+export default Windows;
