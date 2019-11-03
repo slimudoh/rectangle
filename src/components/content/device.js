@@ -26,7 +26,7 @@ function Device(props) {
             height: props.dimensions.deviceHeight
           }}
         >
-          {/* <div
+          <div
             className="device__phone--screen"
             style={{
               width: props.dimensions.screenWidth,
@@ -36,13 +36,13 @@ function Device(props) {
             <iframe
               onLoad={frameOnLoad}
               title="myDevice"
-              src="http://localhost:8080/overview"
+              src=""
               style={{
                 width: props.dimensions.screenWidth,
                 height: props.dimensions.screenHeight
               }}
             ></iframe>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

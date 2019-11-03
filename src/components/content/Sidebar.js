@@ -24,6 +24,12 @@ function Sidebar() {
           <div className="sidebar__container--landscape"></div>
         </div>
       </div>
+      <div className="sidebar__rule"></div>
+      <div className="sidebar__container">
+        <div>
+          <FontAwesomeIcon icon="info-circle" />
+        </div>
+      </div>
     </div>
   );
 }
