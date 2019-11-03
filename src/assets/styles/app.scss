@@ -62,7 +62,6 @@ $debugger: 1px dotted red;
   >.sidebar__container {
     padding-bottom: 5px;
 
-
     >div {
       height: 40px;
       color: #fff;
@@ -111,111 +110,68 @@ $debugger: 1px dotted red;
   padding-right: 10px;
   padding-top: 60px;
   min-width: 1200px;
+  background-color: #3f4448;
+  z-index: -1;
 
   >.container__content {
     overflow: hidden;
   }
 }
 
-.accordion {
+.phones {
+  height: 89vh;
+  overflow: auto;
+  padding-bottom: 50px;
 
-  >.accordion__header {
+  >.phones__container {
+    overflow: hidden;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     align-content: center;
-    border-bottom: 1px solid #ccc;
-    overflow: hidden;
-
-    >div {
-      width: 100px;
-      height: 40px;
-      border-top: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-      font-size: 10px;
-      cursor: pointer;
-    }
-  }
-
-  >.accordion__body {
-    height: 95vh;
-    overflow: auto;
-    padding-bottom: 50px;
-  }
-}
-
-
-
-.banner {
-  background-color: $bannerColor;
-  padding: 0 10px;
-  margin-top: 5px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  overflow: hidden;
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, .2);
-  }
-
-  >.banner__name {
-    width: 200px;
-    text-transform: capitalize;
-    font-size: 14px;
-  }
-
-  >.banner__view {
-    width: 200px;
-    text-align: right;
-    font-size: 14px;
   }
 }
 
 .device {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-content: center;
+  margin: 10px;
+  padding-top: 10px;
   overflow: hidden;
+  background: #ddd;
+  background-color: $headerColor;
 
-  >.device__phone {
-    width: 100%;
-    padding: 30px 0;
-    border-radius: 4px;
-    overflow: hidden;
-    background: #ddd;
+  >.device__info {
+    padding: 0 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 12px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     align-content: center;
 
+    >.device__info--name {
+      width: 60%;
+      text-align: left;
+    }
+
+    >.device__info--dimension {
+      width: 40%;
+      text-align: right;
+    }
+  }
+
+
+  >.device__phone {
+    overflow: hidden;
+    background: #ddd;
+    background-color: $headerColor;
+
+
     >.device__phone--device {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-      overflow: hidden;
-      border-radius: 60px;
       background-color: #000;
 
       >.device__phone--screen {
@@ -223,11 +179,7 @@ $debugger: 1px dotted red;
         overflow: hidden;
       }
     }
-
-
   }
-
-
 }
 
 iframe {

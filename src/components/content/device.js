@@ -7,7 +7,17 @@ function Device(props) {
   };
 
   return (
-    <div className="device">
+    <div
+      className="device"
+      style={{
+        width: props.dimensions.screenWidth,
+        height: props.dimensions.screenHeight
+      }}
+    >
+      <div className="device__info">
+        <div className="device__info--name">{props.name}</div>
+        <div className="device__info--dimension">{props.size}</div>
+      </div>
       <div className="device__phone">
         <div
           className="device__phone--device"
@@ -16,7 +26,7 @@ function Device(props) {
             height: props.dimensions.deviceHeight
           }}
         >
-          <div
+          {/* <div
             className="device__phone--screen"
             style={{
               width: props.dimensions.screenWidth,
@@ -32,7 +42,7 @@ function Device(props) {
                 height: props.dimensions.screenHeight
               }}
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
