@@ -4,9 +4,7 @@ const iphoneDetails = [
     size: "375 x 812",
     dimensions: {
       screenWidth: "375px",
-      screenHeight: "812px",
-      deviceWidth: "475px",
-      deviceHeight: "912px"
+      screenHeight: "812px"
     },
     display: 0
   },
@@ -15,9 +13,7 @@ const iphoneDetails = [
     size: "414 x 738",
     dimensions: {
       screenWidth: "414px",
-      screenHeight: "736px",
-      deviceWidth: "514px",
-      deviceHeight: "836px"
+      screenHeight: "736px"
     },
     display: 0
   },
@@ -26,9 +22,7 @@ const iphoneDetails = [
     size: "375 x 667",
     dimensions: {
       screenWidth: "375px",
-      screenHeight: "667px",
-      deviceWidth: "475px",
-      deviceHeight: "767px"
+      screenHeight: "667px"
     },
     display: 0
   },
@@ -38,9 +32,7 @@ const iphoneDetails = [
     size: "414 x 736",
     dimensions: {
       screenWidth: "414px",
-      screenHeight: "736px",
-      deviceWidth: "514px",
-      deviceHeight: "836px"
+      screenHeight: "736px"
     },
     display: 0
   },
@@ -49,9 +41,7 @@ const iphoneDetails = [
     size: "375 x 667",
     dimensions: {
       screenWidth: "375px",
-      screenHeight: "667px",
-      deviceWidth: "475px",
-      deviceHeight: "767px"
+      screenHeight: "667px"
     },
     display: 0
   },
@@ -60,9 +50,7 @@ const iphoneDetails = [
     size: "375 x 667",
     dimensions: {
       screenWidth: "375px",
-      screenHeight: "667px",
-      deviceWidth: "475px",
-      deviceHeight: "767px"
+      screenHeight: "667px"
     },
     display: 0
   },
@@ -71,9 +59,7 @@ const iphoneDetails = [
     size: "375 x 667",
     dimensions: {
       screenWidth: "375px",
-      screenHeight: "667px",
-      deviceWidth: "475px",
-      deviceHeight: "767px"
+      screenHeight: "667px"
     },
     display: 0
   },
@@ -82,9 +68,7 @@ const iphoneDetails = [
     size: "375 x 667",
     dimensions: {
       screenWidth: "375px",
-      screenHeight: "667px",
-      deviceWidth: "475px",
-      deviceHeight: "767px"
+      screenHeight: "667px"
     },
     display: 0
   },
@@ -93,9 +77,7 @@ const iphoneDetails = [
     size: "320x568",
     dimensions: {
       screenWidth: "320px",
-      screenHeight: "568px",
-      deviceWidth: "420px",
-      deviceHeight: "668px"
+      screenHeight: "568px"
     },
     display: 0
   },
@@ -104,9 +86,7 @@ const iphoneDetails = [
     size: "320x480",
     dimensions: {
       screenWidth: "320px",
-      screenHeight: "480px",
-      deviceWidth: "420px",
-      deviceHeight: "580px"
+      screenHeight: "480px"
     },
     display: 0
   },
@@ -115,9 +95,7 @@ const iphoneDetails = [
     size: "320x480",
     dimensions: {
       screenWidth: "320px",
-      screenHeight: "480px",
-      deviceWidth: "420px",
-      deviceHeight: "580px"
+      screenHeight: "480px"
     },
     display: 0
   },
@@ -126,9 +104,7 @@ const iphoneDetails = [
     size: "320 x 568",
     dimensions: {
       screenWidth: "320px",
-      screenHeight: "568px",
-      deviceWidth: "420px",
-      deviceHeight: "668px"
+      screenHeight: "568px"
     },
     display: 0
   },
@@ -137,9 +113,7 @@ const iphoneDetails = [
     size: "320x480",
     dimensions: {
       screenWidth: "320px",
-      screenHeight: "568px",
-      deviceWidth: "420px",
-      deviceHeight: "668px"
+      screenHeight: "568px"
     },
     display: 0
   },
@@ -148,9 +122,7 @@ const iphoneDetails = [
     size: "768 x 1024",
     dimensions: {
       screenWidth: "768px",
-      screenHeight: "1024px",
-      deviceWidth: "868px",
-      deviceHeight: "1224px"
+      screenHeight: "1024px"
     },
     display: 0
   },
@@ -159,9 +131,7 @@ const iphoneDetails = [
     size: "768 x 1024",
     dimensions: {
       screenWidth: "768px",
-      screenHeight: "1024px",
-      deviceWidth: "868px",
-      deviceHeight: "1224px"
+      screenHeight: "1024px"
     },
     display: 0
   },
@@ -170,9 +140,7 @@ const iphoneDetails = [
     size: "768 x 1024",
     dimensions: {
       screenWidth: "768px",
-      screenHeight: "1024px",
-      deviceWidth: "868px",
-      deviceHeight: "1224px"
+      screenHeight: "1024px"
     },
     display: 0
   }

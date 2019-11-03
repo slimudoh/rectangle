@@ -9,10 +9,8 @@ function Iphone() {
         {iphoneDetails.map((item, index) => (
           <Device
             dimensions={item.dimensions}
-            colors={item.colors}
             name={item.name}
             size={item.size}
-            views={item.views}
             key={index}
           />
         ))}
