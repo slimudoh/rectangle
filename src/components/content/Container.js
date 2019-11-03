@@ -1,11 +1,15 @@
 import React from "react";
-import Accordion from "./Accordion";
+import Iphone from "../devices/Iphone";
+import Android from "../devices/Android";
+import Windows from "../devices/Windows";
 
 function Header() {
   return (
     <div className="container">
       <div className="container__content">
-        <Accordion />
+        <Iphone />
+        {/* <Android />
+        <Windows /> */}
       </div>
     </div>
   );

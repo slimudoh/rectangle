@@ -1,8 +1,23 @@
 import React from "react";
 
 function Device(props) {
+  const frameOnLoad = () => {
+    // console.log(iframeElement.current);
+    console.log("hello");
+  };
+
   return (
-    <div className="device">
+    <div
+      className="device"
+      style={{
+        width: props.dimensions.screenWidth,
+        height: props.dimensions.screenHeight
+      }}
+    >
+      <div className="device__info">
+        <div className="device__info--name">{props.name}</div>
+        <div className="device__info--dimension">{props.size}</div>
+      </div>
       <div className="device__phone">
         <div
           className="device__phone--device"
@@ -19,8 +34,9 @@ function Device(props) {
             }}
           >
             <iframe
+              onLoad={frameOnLoad}
               title="myDevice"
-              src="http://localhost:8080/overview"
+              src=""
               style={{
                 width: props.dimensions.screenWidth,
                 height: props.dimensions.screenHeight

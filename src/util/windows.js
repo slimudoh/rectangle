@@ -4,9 +4,7 @@ const lumiaDetails = [
     size: "375 x 812",
     dimensions: {
       screenWidth: "375px",
-      screenHeight: "812px",
-      deviceWidth: "475px",
-      deviceHeight: "912px"
+      screenHeight: "812px"
     },
     display: 0
   }

@@ -1,126 +1,177 @@
 $accordionColor: #ddd;
 $containerColor: #fff;
-$headerColor: #ccc;
-$logoColor: #000;
-$sidebarColor: #eee;
+$headerColor: #24292e;
+$logoColor: #fff;
+$sidebarColor: #24292e;
 $bannerColor: #ddd;
 $deviceColor: #fff;
 $footerColor: #eee;
+$debugger: 1px dotted red;
 
-.container {
+.header {
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100%;
-  padding-left: 220px;
-  padding-right: 20px;
-  padding-top: 5px;
-  min-width: 1200px;
-
-  >.container__content {
-    overflow: hidden;
-  }
-}
-
-.accordion {
-
-  >.accordion__header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: center;
-    border-bottom: 1px solid #ccc;
-    overflow: hidden;
-
-    >div {
-      width: 100px;
-      height: 40px;
-      border-top: 1px solid #ccc;
-      border-right: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-      font-size: 10px;
-      cursor: pointer;
-    }
-  }
-
-  >.accordion__body {
-    height: 95vh;
-    overflow: auto;
-    padding-bottom: 50px;
-  }
-}
-
-
-
-.banner {
-  background-color: $bannerColor;
+  width: 100%;
+  height: 50px;
   padding: 0 10px;
-  margin-top: 5px;
-  height: 40px;
+  background-color: $headerColor;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   align-content: center;
-  overflow: hidden;
-  cursor: pointer;
 
-  &:hover {
-    background-color: rgba(0, 0, 0, .2);
+  >.header__logo {
+    width: 200px;
+    color: $logoColor;
+    font-size: 25px;
+    font-weight: 600;
   }
 
-  >.banner__name {
-    width: 200px;
-    text-transform: capitalize;
-    font-size: 14px;
+  >.header__search {
+    width: 500px;
+    height: 35px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #3f4448;
+
+    >form {
+      >input {
+        height: 35px;
+        padding: 0 10px;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  padding: 5px;
+  background-color: $sidebarColor;
+
+  >.sidebar__container {
+    padding-bottom: 5px;
+
+    >div {
+      height: 40px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      border: 1px solid #ddd;
+      margin-bottom: 5px;
+      font-size: 25px;
+      cursor: pointer;
+      background-color: transparent;
+
+      >.sidebar__container--portrait {
+        width: 15px;
+        height: 25px;
+        background-color: #fff;
+      }
+
+      >.sidebar__container--landscape {
+        width: 25px;
+        height: 15px;
+        background-color: #fff;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, .2);
+      }
+    }
   }
 
-  >.banner__view {
-    width: 200px;
-    text-align: right;
-    font-size: 14px;
+  >.sidebar__rule {
+    height: 2px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+}
+
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-left: 60px;
+  padding-right: 10px;
+  padding-top: 60px;
+  min-width: 1200px;
+  background-color: #3f4448;
+  z-index: -1;
+
+  >.container__content {
+    overflow: hidden;
+  }
+}
+
+.phones {
+  height: 89vh;
+  overflow: auto;
+  padding-bottom: 50px;
+
+  >.phones__container {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: center;
   }
 }
 
 .device {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-content: center;
+  margin: 10px;
+  padding-top: 10px;
   overflow: hidden;
+  background: #ddd;
+  background-color: $headerColor;
 
-  >.device__phone {
-    width: 100%;
-    padding: 30px 0;
-    border-radius: 4px;
-    overflow: hidden;
-    background: #ddd;
+  >.device__info {
+    padding: 0 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 12px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     align-content: center;
 
+    >.device__info--name {
+      width: 60%;
+      text-align: left;
+    }
+
+    >.device__info--dimension {
+      width: 40%;
+      text-align: right;
+    }
+  }
+
+
+  >.device__phone {
+    overflow: hidden;
+    background: #ddd;
+    background-color: $headerColor;
+
+
     >.device__phone--device {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-      overflow: hidden;
-      border-radius: 60px;
       background-color: #000;
 
       >.device__phone--screen {
@@ -128,43 +179,28 @@ $footerColor: #eee;
         overflow: hidden;
       }
     }
-
-
   }
-
-
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200px;
-  background-color: $sidebarColor;
-  padding-left: 20px;
 }
 
 iframe {
   border: 0;
+}
 
-  body {
+body {
 
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-    }
+  ::-webkit-scrollbar {
+    width: 5px;
   }
 
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
 }
