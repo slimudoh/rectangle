@@ -4,8 +4,8 @@ import Android from "../devices/Android";
 import Windows from "../devices/Windows";
 
 function Header() {
-  const [iphone, setIphone] = useState(false);
-  const [android, setAndroid] = useState(true);
+  const [iphone, setIphone] = useState(true);
+  const [android, setAndroid] = useState(false);
   const [windows, setWindows] = useState(false);
 
   const showIphone = () => {
@@ -31,7 +31,7 @@ function Header() {
       <div className="container__content">
         {iphone ? <Iphone /> : null}
         {android ? <Android /> : null}
-        {windows ? <Windows /> : null}
+        {windows ? <Windows /> : null}3{" "}
       </div>
     </div>
   );
