@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 
 function Device(props) {
+  const iframeElement = useRef(null);
+
   const frameOnLoad = () => {
-    // console.log(iframeElement.current);
+    console.log(iframeElement.current);
     console.log("hello");
   };
 

@@ -8,8 +8,8 @@ function Header() {
     <div className="container">
       <div className="container__content">
         <Iphone />
-        {/* <Android />
-        <Windows /> */}
+        <Android />
+        <Windows />
       </div>
     </div>
   );
