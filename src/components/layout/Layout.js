@@ -1,15 +1,13 @@
 import React from "react";
 import Header from "./../content/Header";
 import Sidebar from "./../content/Sidebar";
-import Portrait from "./../content/Portrait";
-import Landscape from "./../content/Landscape";
+import Container from "./../content/Container";
 
 function Layout() {
   return (
     <div>
       <Header />
-      <Portrait />
-      <Landscape />
+      <Container />
       <Sidebar />
     </div>
   );
