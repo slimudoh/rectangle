@@ -5,6 +5,8 @@ function Header() {
 
   const sendUrl = () => {
     const inputValue = iframeUrl.current.value;
+
+    console.log(inputValue);
   };
 
   return (

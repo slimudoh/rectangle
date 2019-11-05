@@ -1,6 +1,6 @@
 import React from "react";
-import Device from "../content/Device";
-import iphoneDetails from "../../util/iphone";
+import Device from "../../content/Device";
+import iphoneDetails from "../../../util/portrait/iphone";
 
 function Iphone() {
   return (
