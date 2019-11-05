@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Iphone from "../devices/Iphone";
-import Android from "../devices/Android";
-import Windows from "../devices/Windows";
+import Iphone from "../devices/portrait/Iphone";
+import Android from "../devices/portrait/Android";
+import Windows from "../devices/portrait/Windows";
 
-function Header() {
+function Portrait() {
   const [iphone, setIphone] = useState(true);
   const [android, setAndroid] = useState(false);
   const [windows, setWindows] = useState(false);
@@ -37,4 +37,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Portrait;

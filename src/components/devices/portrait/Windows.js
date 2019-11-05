@@ -1,12 +1,12 @@
 import React from "react";
-import Device from "../content/Device";
-import androidDetails from "../../util/android";
+import Device from "../../content/Device";
+import windowsDetails from "../../../util/portrait/windows";
 
-function Android() {
+function Windows() {
   return (
     <div className="phones">
       <div className="phones__container">
-        {androidDetails.map((item, index) => (
+        {windowsDetails.map((item, index) => (
           <Device
             dimensions={item.dimensions}
             name={item.name}
@@ -19,4 +19,4 @@ function Android() {
   );
 }
 
-export default Android;
+export default Windows;
