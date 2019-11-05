@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Device from "../content/Device";
 import iphoneDetails from "../../util/iphone";
 
