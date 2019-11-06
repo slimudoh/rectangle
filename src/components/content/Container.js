@@ -11,8 +11,8 @@ function Container() {
   const [androidPortrait, setAndroidPortrait] = useState(false);
   const [windowsPortrait, setWindowsPortrait] = useState(false);
   const [iphoneLandscape, setIphoneLandscape] = useState(true);
-  const [androidLandscape, , setAndroidLandscape] = useState(false);
-  const [windowsLandscape, , setWindowsLandscape] = useState(false);
+  const [androidLandscape, setAndroidLandscape] = useState(false);
+  const [windowsLandscape, setWindowsLandscape] = useState(false);
 
   const showIphonePortrait = () => {
     setIphonePortrait(true);
