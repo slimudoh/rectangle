@@ -4,8 +4,8 @@ function Device(props) {
   const iframeElement = useRef(null);
 
   const frameOnLoad = () => {
-    console.log(iframeElement.current);
-    console.log("hello");
+    // console.log(iframeElement.current);
+    // console.log("hello");
   };
 
   return (
