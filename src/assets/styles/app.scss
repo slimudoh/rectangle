@@ -98,6 +98,90 @@ $debugger: 1px dotted red;
     border: 1px solid #ccc;
     margin-bottom: 10px;
   }
+
+  >.sidebar__about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    overflow: auto;
+
+    >.sidebar__about--cover {
+      max-width: 600px;
+      padding: 10px;
+      margin: 100px auto;
+
+      >.sidebar__about--modal {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: center;
+
+        >p {
+          text-align: right;
+          margin: 0;
+
+          >span {
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+
+        >span {
+          font-size: 30px;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.18;
+          letter-spacing: normal;
+          text-align: center;
+          color: #24292e;
+        }
+
+        >div {
+          >p {
+            font-size: 14px;
+            font-weight: 200;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.46;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+          }
+
+          >span {
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.86;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+
+            >a {
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: 300;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 2.86;
+              letter-spacing: normal;
+              text-align: center;
+              color: #777777;
+
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 

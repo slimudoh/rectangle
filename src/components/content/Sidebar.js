@@ -7,6 +7,7 @@ function Sidebar() {
   const [windows, setWindows] = useState(false);
   const [portrait, setPortrait] = useState(true);
   const [landscape, setLandscape] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const showIphone = () => {
     setIphone(true);
@@ -34,6 +35,14 @@ function Sidebar() {
   const showLandscape = () => {
     setPortrait(false);
     setLandscape(true);
+  };
+
+  const openModal = () => {
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    setModal(false);
   };
 
   return (
@@ -82,10 +91,40 @@ function Sidebar() {
       </div>
       <div className="sidebar__rule"></div>
       <div className="sidebar__container">
-        <div>
+        <div onClick={openModal}>
           <FontAwesomeIcon icon="info-circle" />
         </div>
       </div>
+      {modal ? (
+        <div className="sidebar__about">
+          <div className="sidebar__about--cover">
+            <div className="sidebar__about--modal">
+              <p>
+                <span onClick={closeModal}>
+                  <FontAwesomeIcon icon="times" />
+                </span>
+              </p>
+              <span>ABOUT RECTANGLE</span>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean fringilla metus eu lectus dictum consequat. Integer vel
+                  elit a odio convallis elementum a quis dui. Nunc sed magna
+                  nunc. Mauris in enim maximus justo aliquet vulputate. Morbi
+                  cursus diam a erat malesuada viverra. In ultricies
+                  pellentesque dolor et tristique.
+                </p>
+                <span>
+                  <a href="https://twitter.com/slimudoh" target="_blank">
+                    @slimudoh
+                  </a>{" "}
+                  &copy;2019 Rectangle
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

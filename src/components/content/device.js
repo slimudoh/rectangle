@@ -4,8 +4,8 @@ function Device(props) {
   const iframeElement = useRef(null);
 
   const frameOnLoad = () => {
-    console.log(iframeElement.current);
-    console.log("hello");
+    // console.log(iframeElement.current);
+    // console.log("hello");
   };
 
   return (
@@ -38,7 +38,7 @@ function Device(props) {
             <iframe
               onLoad={frameOnLoad}
               title="myDevice"
-              src=""
+              src="http://localhost/projects/web/prestashop/en/"
               style={{
                 width: props.dimensions.screenWidth,
                 height: props.dimensions.screenHeight
