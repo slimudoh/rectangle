@@ -23,23 +23,23 @@ function Container() {
     setWindowsLandscape(false);
   };
 
-  // const showAndroidPortrait = () => {
-  //   setIphonePortrait(false);
-  //   setAndroidPortrait(true);
-  //   setWindowsPortrait(false);
-  //   setIphoneLandscape(false);
-  //   setAndroidLandscape(false);
-  //   setWindowsLandscape(false);
-  // };
+  const showAndroidPortrait = () => {
+    setIphonePortrait(false);
+    setAndroidPortrait(true);
+    setWindowsPortrait(false);
+    setIphoneLandscape(false);
+    setAndroidLandscape(false);
+    setWindowsLandscape(false);
+  };
 
-  // const showWindowsPortrait = () => {
-  //   setIphonePortrait(false);
-  //   setAndroidPortrait(false);
-  //   setWindowsPortrait(true);
-  //   setIphoneLandscape(false);
-  //   setAndroidLandscape(false);
-  //   setWindowsLandscape(false);
-  // };
+  const showWindowsPortrait = () => {
+    setIphonePortrait(false);
+    setAndroidPortrait(false);
+    setWindowsPortrait(true);
+    setIphoneLandscape(false);
+    setAndroidLandscape(false);
+    setWindowsLandscape(false);
+  };
 
   const showIphoneLandscape = () => {
     setIphonePortrait(false);
