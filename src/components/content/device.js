@@ -8,6 +8,8 @@ function Device(props) {
     // console.log("hello");
   };
 
+  // console.log(props.url);
+
   return (
     <div
       className="device"
@@ -38,7 +40,7 @@ function Device(props) {
             <iframe
               onLoad={frameOnLoad}
               title="myDevice"
-              src="http://localhost/projects/web/prestashop/en/"
+              src={props.url}
               style={{
                 width: props.dimensions.screenWidth,
                 height: props.dimensions.screenHeight

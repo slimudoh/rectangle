@@ -115,7 +115,11 @@ function Sidebar() {
                   pellentesque dolor et tristique.
                 </p>
                 <span>
-                  <a href="https://twitter.com/slimudoh" target="_blank">
+                  <a
+                    href="https://twitter.com/slimudoh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     @slimudoh
                   </a>{" "}
                   &copy;2019 Rectangle
