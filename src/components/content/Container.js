@@ -6,7 +6,7 @@ import Iphonelandscape from "../devices/landscape/Iphone";
 import Androidlandscape from "../devices/landscape/Android";
 import Windowslandscape from "../devices/landscape/Windows";
 
-function Container() {
+function Container(props) {
   const [iphonePortrait, setIphonePortrait] = useState(true);
   const [androidPortrait, setAndroidPortrait] = useState(false);
   const [windowsPortrait, setWindowsPortrait] = useState(false);
@@ -71,12 +71,12 @@ function Container() {
   return (
     <div className="container">
       <div className="container__content">
-        {iphonePortrait ? <Iphoneportrait /> : null}
-        {androidPortrait ? <Androidportrait /> : null}
-        {windowsPortrait ? <Windowsportrait /> : null}
-        {iphoneLandscape ? <Iphonelandscape /> : null}
-        {androidLandscape ? <Androidlandscape /> : null}
-        {windowsLandscape ? <Windowslandscape /> : null}
+        {iphonePortrait ? <Iphoneportrait url={props.url} /> : null}
+        {androidPortrait ? <Androidportrait url={props.url} /> : null}
+        {windowsPortrait ? <Windowsportrait url={props.url} /> : null}
+        {iphoneLandscape ? <Iphonelandscape url={props.url} /> : null}
+        {androidLandscape ? <Androidlandscape url={props.url} /> : null}
+        {windowsLandscape ? <Windowslandscape url={props.url} /> : null}
       </div>
     </div>
   );

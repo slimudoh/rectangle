@@ -1,23 +1,22 @@
 import React, { useRef } from "react";
 
-function Header() {
-  const iframeUrl = useRef("null");
+function Header(props) {
+  const iframeUrl = useRef(null);
 
-  const sendUrl = () => {
+  const getUrl = e => {
+    e.preventDefault();
     const inputValue = iframeUrl.current.value;
-
-    console.log(inputValue);
+    props.getFormUrl("https://hr360.rovedana.com/");
   };
 
   return (
     <div className="header">
       <div className="header__logo">RECTANGLE</div>
       <div className="header__search">
-        <form>
+        <form onSubmit={getUrl}>
           <input
             type="text"
             placeholder="Enter url and hit enter"
-            onChange={sendUrl}
             ref={iframeUrl}
           />
         </form>

@@ -2,7 +2,7 @@ import React from "react";
 import Device from "../../content/Device";
 import windowsDetails from "../../../util/portrait/windows";
 
-function Windows() {
+function Windows(props) {
   return (
     <div className="phones">
       <div className="phones__container">
@@ -12,6 +12,7 @@ function Windows() {
             name={item.name}
             size={item.size}
             key={index}
+            url={props.url}
           />
         ))}
       </div>
