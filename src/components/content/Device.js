@@ -1,12 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 function Device(props) {
-  const iframeElement = useRef(null);
   const loaderElement = useRef(null);
 
+  useEffect(() => {
+    loaderElement.current.style.display = "none";
+
+    if (props.url) {
+      loaderElement.current.style.display = "block";
+    }
+  });
+
   const frameOnLoad = () => {
-    // console.log(iframeElement.current);
-    // console.log(loaderElement.current.style.display );
     loaderElement.current.style.display = "none";
   };
 
