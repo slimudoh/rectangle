@@ -12,6 +12,7 @@ function Android(props) {
             name={item.name}
             size={item.size}
             key={index}
+            index={index}
             url={props.url}
           />
         ))}

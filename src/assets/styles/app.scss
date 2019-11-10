@@ -6,6 +6,7 @@ $sidebarColor: #24292e;
 $bannerColor: #ddd;
 $deviceColor: #fff;
 $footerColor: #eee;
+$deviceLoaderColor: #24292e;
 $debugger: 1px dotted red;
 
 .header {
@@ -261,6 +262,36 @@ $debugger: 1px dotted red;
       >.device__phone--screen {
         background-color: #fff;
         overflow: hidden;
+        position: relative;
+
+        >.device__loader {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background: #fff;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+
+          >div {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            border-top: 5px solid $deviceLoaderColor;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $deviceLoaderColor;
+            border-left: 5px solid $deviceLoaderColor;
+            animation: loader .3s linear infinite;
+            -moz-animation: loader .3s linear infinite;
+            -o-animation: loader .3s linear infinite;
+            -webkit-animation: loader .3s linear infinite;
+          }
+        }
       }
     }
   }
@@ -286,5 +317,46 @@ body {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

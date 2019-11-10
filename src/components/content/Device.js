@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 
 function Device(props) {
   const iframeElement = useRef(null);
+  const loaderElement = useRef(null);
 
   const frameOnLoad = () => {
     // console.log(iframeElement.current);
-    // console.log("hello");
+    // console.log(loaderElement.current.style.display );
+    loaderElement.current.style.display = "none";
   };
-
-  // console.log(props.url);
 
   return (
     <div
@@ -46,6 +46,9 @@ function Device(props) {
                 height: props.dimensions.screenHeight
               }}
             ></iframe>
+            <div className="device__loader" ref={loaderElement}>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
