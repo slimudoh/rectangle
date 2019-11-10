@@ -6,20 +6,17 @@ function Header(props) {
   const getUrl = e => {
     e.preventDefault();
     const inputValue = iframeUrl.current.value;
-
     const securedHttp = "https://";
     const insecuredHttp = "http://";
-    if (inputValue.indexOf(securedHttp) !== -1) {
-      alert("Link must have http or https");
+    if (
+      inputValue.trim().includes(securedHttp) ||
+      inputValue.trim().includes(insecuredHttp)
+    ) {
+      props.getFormUrl(inputValue);
       return;
     }
 
-    if (inputValue.indexOf(insecuredHttp) !== -1) {
-      alert("Link must have http or https");
-      return;
-    }
-
-    props.getFormUrl(inputValue);
+    alert("Link must have http or https");
   };
 
   return (
