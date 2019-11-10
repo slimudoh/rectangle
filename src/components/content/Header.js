@@ -6,7 +6,20 @@ function Header(props) {
   const getUrl = e => {
     e.preventDefault();
     const inputValue = iframeUrl.current.value;
-    props.getFormUrl("https://hr360.rovedana.com/");
+
+    const securedHttp = "https://";
+    const insecuredHttp = "http://";
+    if (inputValue.indexOf(securedHttp) !== -1) {
+      alert("Link must have http or https");
+      return;
+    }
+
+    if (inputValue.indexOf(insecuredHttp) !== -1) {
+      alert("Link must have http or https");
+      return;
+    }
+
+    props.getFormUrl(inputValue);
   };
 
   return (
