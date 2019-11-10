@@ -13,6 +13,7 @@ $debugger: 1px dotted red;
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 1200px;
   height: 50px;
   padding: 0 10px;
   background-color: $headerColor;
@@ -200,6 +201,21 @@ $debugger: 1px dotted red;
 
   >.container__content {
     overflow: hidden;
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.container__phone {
+  display: none;
+  padding-left: 80px;
+  padding-right: 20px;
+  padding-top: 80px;
+
+  @media (max-width: 1200px) {
+    display: block;
   }
 }
 
