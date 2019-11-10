@@ -69,16 +69,24 @@ function Container(props) {
   };
 
   return (
-    <div className="container">
-      <div className="container__content">
-        {iphonePortrait ? <Iphoneportrait url={props.url} /> : null}
-        {androidPortrait ? <Androidportrait url={props.url} /> : null}
-        {windowsPortrait ? <Windowsportrait url={props.url} /> : null}
-        {iphoneLandscape ? <Iphonelandscape url={props.url} /> : null}
-        {androidLandscape ? <Androidlandscape url={props.url} /> : null}
-        {windowsLandscape ? <Windowslandscape url={props.url} /> : null}
+    <>
+      <div className="container__phone">
+        Sorry to disappoint you. You can only view this application on a screen
+        of width not less than 1200px.
+        <br />
+        We are very sorry for the inconvinences.
       </div>
-    </div>
+      <div className="container">
+        <div className="container__content">
+          {iphonePortrait ? <Iphoneportrait url={props.url} /> : null}
+          {androidPortrait ? <Androidportrait url={props.url} /> : null}
+          {windowsPortrait ? <Windowsportrait url={props.url} /> : null}
+          {iphoneLandscape ? <Iphonelandscape url={props.url} /> : null}
+          {androidLandscape ? <Androidlandscape url={props.url} /> : null}
+          {windowsLandscape ? <Windowslandscape url={props.url} /> : null}
+        </div>
+      </div>
+    </>
   );
 }
 

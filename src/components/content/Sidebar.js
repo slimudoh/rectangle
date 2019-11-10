@@ -114,16 +114,7 @@ function Sidebar() {
                   cursus diam a erat malesuada viverra. In ultricies
                   pellentesque dolor et tristique.
                 </p>
-                <span>
-                  <a
-                    href="https://twitter.com/slimudoh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    @slimudoh
-                  </a>{" "}
-                  &copy;2019 Rectangle
-                </span>
+                <span>&copy;2019 Rectangle</span>
               </div>
             </div>
           </div>
