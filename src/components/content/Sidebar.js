@@ -111,7 +111,7 @@ function Sidebar(props) {
               <span>ABOUT RECTANGLE</span>
               <div>
                 <p>
-                  This appliaction is developed for the purpose of testing the
+                  This application is developed for the purpose of testing the
                   responsiveness of user interface of web applications across
                   different devices which are not physical present. These
                   applications includes those in development and on production.
