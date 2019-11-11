@@ -38,8 +38,8 @@ function Container(props) {
   return (
     <>
       <div className="container__phone">
-        Sorry to disappoint you. You can only view this application on a screen
-        of width not less than 1200px.
+        Sorry to disappoint you. You can only view this application on a laptop
+        or desktop computer.
         <br />
         We are very sorry for the inconvinences.
       </div>
