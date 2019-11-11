@@ -3,13 +3,13 @@ import Device from "../../content/Device";
 import androidDetailsLandscape from "../../../util/landscape/android";
 
 function AndroidLandscape(props) {
-  console.log("land");
   return (
     <div className="phones">
       <div className="phones__container">
         {androidDetailsLandscape.map((item, index) => (
           <Device
             dimensions={item.dimensions}
+            orientation={item.orientation}
             name={item.name}
             size={item.size}
             key={index}

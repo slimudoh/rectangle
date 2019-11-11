@@ -5,7 +5,8 @@ const androidDetailsPortrait = [
     dimensions: {
       screenWidth: "375px",
       screenHeight: "812px"
-    }
+    },
+    orientation: "Portrait"
   }
 ];
 

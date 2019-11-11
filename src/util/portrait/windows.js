@@ -5,7 +5,8 @@ const windowsDetailsPortrait = [
     dimensions: {
       screenWidth: "375px",
       screenHeight: "812px"
-    }
+    },
+    orientation: "Landscape"
   }
 ];
 

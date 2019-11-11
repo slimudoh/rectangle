@@ -5,7 +5,8 @@ const windowsDetailsLandscape = [
     dimensions: {
       screenWidth: "812px",
       screenHeight: "375px"
-    }
+    },
+    orientation: "Landscape"
   }
 ];
 

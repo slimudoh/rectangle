@@ -9,6 +9,7 @@ function IphonePortrait(props) {
         {iphoneDetailsPortrait.map((item, index) => (
           <Device
             dimensions={item.dimensions}
+            orientation={item.orientation}
             name={item.name}
             size={item.size}
             key={index}

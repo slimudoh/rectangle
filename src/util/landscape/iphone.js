@@ -5,7 +5,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "812px",
       screenHeight: "375px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 8 Plus",
@@ -13,7 +14,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "736px",
       screenHeight: "414px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 8",
@@ -21,7 +23,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "667px",
       screenHeight: "375px"
-    }
+    },
+    orientation: "Landscape"
   },
 
   {
@@ -30,7 +33,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "736px",
       screenHeight: "414px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 7",
@@ -38,7 +42,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "667px",
       screenHeight: "375px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 6s Plus",
@@ -46,7 +51,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "667px",
       screenHeight: "375px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 6 Plus",
@@ -54,7 +60,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "667px",
       screenHeight: "375px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "iPhone 6",
@@ -62,7 +69,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "667px",
       screenHeight: "375px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 5",
@@ -70,7 +78,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "568px",
       screenHeight: "320px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 4",
@@ -78,7 +87,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "480px",
       screenHeight: "320px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone 3",
@@ -86,7 +96,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "480px",
       screenHeight: "320px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPhone SE",
@@ -94,7 +105,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "568px",
       screenHeight: "320px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPod Touch",
@@ -102,7 +114,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "568px",
       screenHeight: "320px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPad Pro (9.7-inch)",
@@ -110,7 +123,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "1024px",
       screenHeight: "768px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPad Air 2",
@@ -118,7 +132,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "1024px",
       screenHeight: "768px"
-    }
+    },
+    orientation: "Landscape"
   },
   {
     name: "Apple iPad Mini 4",
@@ -126,7 +141,8 @@ const iphoneDetailsLandscape = [
     dimensions: {
       screenWidth: "1024px",
       screenHeight: "768px"
-    }
+    },
+    orientation: "Landscape"
   }
 ];
 
