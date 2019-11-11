@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Iphoneportrait from "../devices/portrait/Iphone";
-import Androidportrait from "../devices/portrait/Android";
-import Windowsportrait from "../devices/portrait/Windows";
-import Iphonelandscape from "../devices/landscape/Iphone";
-import Androidlandscape from "../devices/landscape/Android";
-import Windowslandscape from "../devices/landscape/Windows";
+import IphonePortrait from "../devices/portrait/Iphone";
+import AndroidPortrait from "../devices/portrait/Android";
+import WindowsPortrait from "../devices/portrait/Windows";
+import IphoneLandscape from "../devices/landscape/Iphone";
+import AndroidLandscape from "../devices/landscape/Android";
+import WindowsLandscape from "../devices/landscape/Windows";
 
 function Container(props) {
   const [iphone, setIphone] = useState(true);
@@ -29,7 +29,7 @@ function Container(props) {
     } else if (props.orientation === "portrait") {
       setPortrait(true);
       setLandscape(false);
-    } else if (props.orientation === "portrait") {
+    } else if (props.orientation === "landscape") {
       setPortrait(false);
       setLandscape(true);
     }
@@ -45,12 +45,12 @@ function Container(props) {
       </div>
       <div className="container">
         <div className="container__content">
-          {iphone && portrait ? <Iphoneportrait url={props.url} /> : null}
-          {android && portrait ? <Androidportrait url={props.url} /> : null}
-          {windows && portrait ? <Windowsportrait url={props.url} /> : null}
-          {iphone && landscape ? <Iphonelandscape url={props.url} /> : null}
-          {android && landscape ? <Androidlandscape url={props.url} /> : null}
-          {windows && landscape ? <Windowslandscape url={props.url} /> : null}
+          {iphone && portrait ? <IphonePortrait url={props.url} /> : null}
+          {android && portrait ? <AndroidPortrait url={props.url} /> : null}
+          {windows && portrait ? <WindowsPortrait url={props.url} /> : null}
+          {iphone && landscape ? <IphoneLandscape url={props.url} /> : null}
+          {android && landscape ? <AndroidLandscape url={props.url} /> : null}
+          {windows && landscape ? <WindowsLandscape url={props.url} /> : null}
         </div>
       </div>
     </>

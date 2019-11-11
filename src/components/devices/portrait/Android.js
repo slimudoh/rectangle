@@ -3,8 +3,6 @@ import Device from "../../content/Device";
 import androidDetailsPortrait from "../../../util/portrait/android";
 
 function AndroidPortrait(props) {
-  console.log(props);
-  console.log("hello");
   return (
     <div className="phones">
       <div className="phones__container">
