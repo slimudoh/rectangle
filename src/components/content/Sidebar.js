@@ -111,13 +111,55 @@ function Sidebar(props) {
               <span>ABOUT RECTANGLE</span>
               <div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean fringilla metus eu lectus dictum consequat. Integer vel
-                  elit a odio convallis elementum a quis dui. Nunc sed magna
-                  nunc. Mauris in enim maximus justo aliquet vulputate. Morbi
-                  cursus diam a erat malesuada viverra. In ultricies
-                  pellentesque dolor et tristique.
+                  This appliaction is developed for the purpose of testing the
+                  responsiveness of user interface of web applications across
+                  different devices which are not physical present. These
+                  application includes those in development and on production.
+                  <br />
+                  <br />
+                  <span>
+                    Please note that you cannot display websites that sends an
+                    "X-Frame-Options: SAMEORIGIN" response header. This option
+                    prevents the containers from displaying the website you want
+                    to view except thay are hosted on same domain. This is a
+                    security feature used by most applications to prevent
+                    click-jacking.
+                  </span>
+                  <br />
+                  <br />
+                  If you are interested in contributing to this project, then
+                  you can visit the{" "}
+                  <a
+                    href="https://github.com/slimudoh/rectangle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github repository
+                  </a>{" "}
+                  for more information.
+                  <br />
+                  <br />
+                  The project was created my Uwem Micheal Udoh, a software
+                  developer with Rovedana Limited. For issues, comments or
+                  suggestions, You can reach me on{" "}
+                  <a
+                    href="https://twitter.com/slimudoh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    twitter
+                  </a>{" "}
+                  or{" "}
+                  <a
+                    href="https://www.linkedin.com/in/slimudoh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    linkedin
+                  </a>
+                  .
                 </p>
+
                 <span>&copy;2019 Rectangle</span>
               </div>
             </div>

@@ -33,7 +33,7 @@ function Container(props) {
       setPortrait(false);
       setLandscape(true);
     }
-  });
+  }, [props.orientation]);
 
   return (
     <>
