@@ -162,7 +162,7 @@ $debugger: 1px dotted red;
     overflow: auto;
 
     >.sidebar__about--cover {
-      max-width: 600px;
+      max-width: 800px;
       padding: 10px;
       margin: 100px auto;
 
@@ -180,10 +180,12 @@ $debugger: 1px dotted red;
             font-size: 14px;
             cursor: pointer;
           }
+
+
         }
 
         >span {
-          font-size: 30px;
+          font-size: 20px;
           font-stretch: normal;
           font-style: normal;
           line-height: 1.18;
@@ -202,6 +204,16 @@ $debugger: 1px dotted red;
             letter-spacing: normal;
             text-align: left;
             color: #000000;
+
+            >span {
+              color: red;
+            }
+
+            >a {
+              color: #000;
+              text-decoration: underline;
+              font-weight: 600;
+            }
           }
 
           >span {
