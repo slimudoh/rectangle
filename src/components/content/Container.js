@@ -38,8 +38,11 @@ function Container(props) {
   return (
     <>
       <div className="container__phone">
-        Sorry to disappoint you. You can only view this application on a laptop
-        or desktop computer.
+        Sorry to disappoint you. You can only view this application on a screen
+        of width not less than 1200px and not a tablet or handheld device. If
+        you are on the mobile view of your devtool, then you have to exit to be
+        able to use this application properly.
+        <br />
         <br />
         We are very sorry for the inconvinences.
       </div>
