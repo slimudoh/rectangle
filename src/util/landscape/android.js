@@ -1,13 +1,13 @@
-const samsungDetails = [
+const androidDetailsLandscape = [
   {
     name: "Samsung",
     size: "375 x 812",
     dimensions: {
-      screenWidth: "375px",
-      screenHeight: "812px"
+      screenWidth: "812px",
+      screenHeight: "375px"
     },
-    display: 0
+    orientation: "Landscape"
   }
 ];
 
-export default samsungDetails;
+export default androidDetailsLandscape;

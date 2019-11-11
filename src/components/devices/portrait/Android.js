@@ -1,14 +1,15 @@
 import React from "react";
 import Device from "../../content/Device";
-import androidDetails from "../../../util/portrait/android";
+import androidDetailsPortrait from "../../../util/portrait/android";
 
-function Android(props) {
+function AndroidPortrait(props) {
   return (
     <div className="phones">
       <div className="phones__container">
-        {androidDetails.map((item, index) => (
+        {androidDetailsPortrait.map((item, index) => (
           <Device
             dimensions={item.dimensions}
+            orientation={item.orientation}
             name={item.name}
             size={item.size}
             key={index}
@@ -20,4 +21,4 @@ function Android(props) {
   );
 }
 
-export default Android;
+export default AndroidPortrait;

@@ -25,6 +25,7 @@ function Device(props) {
     >
       <div className="device__info">
         <div className="device__info--name">{props.name}</div>
+        <div className="device__info--orientation">{props.orientation}</div>
         <div className="device__info--dimension">{props.size}</div>
       </div>
       <div className="device__phone">

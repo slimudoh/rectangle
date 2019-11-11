@@ -1,14 +1,15 @@
 import React from "react";
 import Device from "../../content/Device";
-import windowsDetails from "../../../util/portrait/windows";
+import windowsDetailsPortrait from "../../../util/portrait/windows";
 
-function Windows(props) {
+function WindowsPortrait(props) {
   return (
     <div className="phones">
       <div className="phones__container">
-        {windowsDetails.map((item, index) => (
+        {windowsDetailsPortrait.map((item, index) => (
           <Device
             dimensions={item.dimensions}
+            orientation={item.orientation}
             name={item.name}
             size={item.size}
             key={index}
@@ -20,4 +21,4 @@ function Windows(props) {
   );
 }
 
-export default Windows;
+export default WindowsPortrait;

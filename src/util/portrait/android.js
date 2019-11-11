@@ -1,4 +1,4 @@
-const samsungDetails = [
+const androidDetailsPortrait = [
   {
     name: "Samsung",
     size: "375 x 812",
@@ -6,8 +6,8 @@ const samsungDetails = [
       screenWidth: "375px",
       screenHeight: "812px"
     },
-    display: 0
+    orientation: "Portrait"
   }
 ];
 
-export default samsungDetails;
+export default androidDetailsPortrait;

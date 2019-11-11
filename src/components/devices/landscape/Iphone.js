@@ -1,14 +1,15 @@
 import React from "react";
 import Device from "../../content/Device";
-import iphoneDetails from "../../../util/portrait/iphone";
+import iphoneDetailsLandscape from "../../../util/landscape/iphone";
 
-function Iphone(props) {
+function IphoneLandscape(props) {
   return (
     <div className="phones">
       <div className="phones__container">
-        {iphoneDetails.map((item, index) => (
+        {iphoneDetailsLandscape.map((item, index) => (
           <Device
             dimensions={item.dimensions}
+            orientation={item.orientation}
             name={item.name}
             size={item.size}
             key={index}
@@ -21,4 +22,4 @@ function Iphone(props) {
   );
 }
 
-export default Iphone;
+export default IphoneLandscape;
