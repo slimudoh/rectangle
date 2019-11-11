@@ -1,13 +1,12 @@
-const lumiaDetails = [
+const windowsDetailsLandscape = [
   {
     name: "Lumia",
     size: "375 x 812",
     dimensions: {
-      screenWidth: "375px",
-      screenHeight: "812px"
-    },
-    display: 0
+      screenWidth: "812px",
+      screenHeight: "375px"
+    }
   }
 ];
 
-export default lumiaDetails;
+export default windowsDetailsLandscape;
