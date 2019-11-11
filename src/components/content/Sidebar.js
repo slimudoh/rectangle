@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Sidebar() {
+function Sidebar(props) {
   const [iphone, setIphone] = useState(true);
   const [android, setAndroid] = useState(false);
   const [windows, setWindows] = useState(false);
@@ -9,32 +9,28 @@ function Sidebar() {
   const [landscape, setLandscape] = useState(false);
   const [modal, setModal] = useState(false);
 
-  const showIphone = () => {
-    setIphone(true);
-    setAndroid(false);
-    setWindows(false);
-  };
+  const passOrientation = val => {
+    if (val === "iphone") {
+      setIphone(true);
+      setAndroid(false);
+      setWindows(false);
+    } else if (val === "android") {
+      setIphone(false);
+      setAndroid(true);
+      setWindows(false);
+    } else if (val === "windows") {
+      setIphone(false);
+      setAndroid(false);
+      setWindows(true);
+    } else if (val === "portrait") {
+      setPortrait(true);
+      setLandscape(false);
+    } else if (val === "landscape") {
+      setPortrait(false);
+      setLandscape(true);
+    }
 
-  const showAndroid = () => {
-    setIphone(false);
-    setAndroid(true);
-    setWindows(false);
-  };
-
-  const showWindows = () => {
-    setIphone(false);
-    setAndroid(false);
-    setWindows(true);
-  };
-
-  const showPortrait = () => {
-    setPortrait(true);
-    setLandscape(false);
-  };
-
-  const showLandscape = () => {
-    setPortrait(false);
-    setLandscape(true);
+    props.getOrientation(val);
   };
 
   const openModal = () => {
@@ -49,23 +45,29 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__container">
         <div
+          title="Iphone"
           style={{
-            backgroundColor: iphone === true ? "rgba(255, 255, 255, .3)" : null
+            backgroundColor: iphone ? "rgba(255, 255, 255, .3)" : null
           }}
+          onClick={() => passOrientation("iphone")}
         >
           <FontAwesomeIcon icon={["fab", "apple"]} />
         </div>
         <div
+          title="Android"
           style={{
-            backgroundColor: android === true ? "rgba(255, 255, 255, .3)" : null
+            backgroundColor: android ? "rgba(255, 255, 255, .3)" : null
           }}
+          onClick={() => passOrientation("android")}
         >
           <FontAwesomeIcon icon={["fab", "android"]} />
         </div>
         <div
+          title="Windows"
           style={{
-            backgroundColor: windows === true ? "rgba(255, 255, 255, .3)" : null
+            backgroundColor: windows ? "rgba(255, 255, 255, .3)" : null
           }}
+          onClick={() => passOrientation("windows")}
         >
           <FontAwesomeIcon icon={["fab", "windows"]} />
         </div>
@@ -73,25 +75,27 @@ function Sidebar() {
       <div className="sidebar__rule"></div>
       <div className="sidebar__container">
         <div
+          title="Portrait View"
           style={{
-            backgroundColor:
-              portrait === true ? "rgba(255, 255, 255, .3)" : null
+            backgroundColor: portrait ? "rgba(255, 255, 255, .3)" : null
           }}
+          onClick={() => passOrientation("portrait")}
         >
           <div className="sidebar__container--portrait"></div>
         </div>
         <div
+          title="Landscape view"
           style={{
-            backgroundColor:
-              landscape === true ? "rgba(255, 255, 255, .3)" : null
+            backgroundColor: landscape ? "rgba(255, 255, 255, .3)" : null
           }}
+          onClick={() => passOrientation("landscape")}
         >
           <div className="sidebar__container--landscape"></div>
         </div>
       </div>
       <div className="sidebar__rule"></div>
       <div className="sidebar__container">
-        <div onClick={openModal}>
+        <div title="About Rectangle" onClick={openModal}>
           <FontAwesomeIcon icon="info-circle" />
         </div>
       </div>

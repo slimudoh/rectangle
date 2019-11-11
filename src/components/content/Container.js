@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Iphoneportrait from "../devices/portrait/Iphone";
 import Androidportrait from "../devices/portrait/Android";
 import Windowsportrait from "../devices/portrait/Windows";
@@ -7,66 +7,33 @@ import Androidlandscape from "../devices/landscape/Android";
 import Windowslandscape from "../devices/landscape/Windows";
 
 function Container(props) {
-  const [iphonePortrait, setIphonePortrait] = useState(true);
-  const [androidPortrait, setAndroidPortrait] = useState(false);
-  const [windowsPortrait, setWindowsPortrait] = useState(false);
-  const [iphoneLandscape, setIphoneLandscape] = useState(true);
-  const [androidLandscape, setAndroidLandscape] = useState(false);
-  const [windowsLandscape, setWindowsLandscape] = useState(false);
+  const [iphone, setIphone] = useState(true);
+  const [android, setAndroid] = useState(false);
+  const [windows, setWindows] = useState(false);
+  const [portrait, setPortrait] = useState(true);
+  const [landscape, setLandscape] = useState(false);
 
-  const showIphonePortrait = () => {
-    setIphonePortrait(true);
-    setAndroidPortrait(false);
-    setWindowsPortrait(false);
-    setIphoneLandscape(false);
-    setAndroidLandscape(false);
-    setWindowsLandscape(false);
-  };
-
-  const showAndroidPortrait = () => {
-    setIphonePortrait(false);
-    setAndroidPortrait(true);
-    setWindowsPortrait(false);
-    setIphoneLandscape(false);
-    setAndroidLandscape(false);
-    setWindowsLandscape(false);
-  };
-
-  const showWindowsPortrait = () => {
-    setIphonePortrait(false);
-    setAndroidPortrait(false);
-    setWindowsPortrait(true);
-    setIphoneLandscape(false);
-    setAndroidLandscape(false);
-    setWindowsLandscape(false);
-  };
-
-  const showIphoneLandscape = () => {
-    setIphonePortrait(false);
-    setAndroidPortrait(false);
-    setWindowsPortrait(false);
-    setIphoneLandscape(true);
-    setAndroidLandscape(false);
-    setWindowsLandscape(false);
-  };
-
-  const showAndroidLandscape = () => {
-    setIphonePortrait(false);
-    setAndroidPortrait(false);
-    setWindowsPortrait(false);
-    setIphoneLandscape(false);
-    setAndroidLandscape(true);
-    setWindowsLandscape(false);
-  };
-
-  const showWindowsLandscape = () => {
-    setIphonePortrait(false);
-    setAndroidPortrait(false);
-    setWindowsPortrait(false);
-    setIphoneLandscape(false);
-    setAndroidLandscape(false);
-    setWindowsLandscape(true);
-  };
+  useEffect(() => {
+    if (props.orientation === "iphone") {
+      setIphone(true);
+      setAndroid(false);
+      setWindows(false);
+    } else if (props.orientation === "android") {
+      setIphone(false);
+      setAndroid(true);
+      setWindows(false);
+    } else if (props.orientation === "windows") {
+      setIphone(false);
+      setAndroid(false);
+      setWindows(true);
+    } else if (props.orientation === "portrait") {
+      setPortrait(true);
+      setLandscape(false);
+    } else if (props.orientation === "portrait") {
+      setPortrait(false);
+      setLandscape(true);
+    }
+  });
 
   return (
     <>
@@ -78,12 +45,12 @@ function Container(props) {
       </div>
       <div className="container">
         <div className="container__content">
-          {iphonePortrait ? <Iphoneportrait url={props.url} /> : null}
-          {androidPortrait ? <Androidportrait url={props.url} /> : null}
-          {windowsPortrait ? <Windowsportrait url={props.url} /> : null}
-          {iphoneLandscape ? <Iphonelandscape url={props.url} /> : null}
-          {androidLandscape ? <Androidlandscape url={props.url} /> : null}
-          {windowsLandscape ? <Windowslandscape url={props.url} /> : null}
+          {iphone && portrait ? <Iphoneportrait url={props.url} /> : null}
+          {android && portrait ? <Androidportrait url={props.url} /> : null}
+          {windows && portrait ? <Windowsportrait url={props.url} /> : null}
+          {iphone && landscape ? <Iphonelandscape url={props.url} /> : null}
+          {android && landscape ? <Androidlandscape url={props.url} /> : null}
+          {windows && landscape ? <Windowslandscape url={props.url} /> : null}
         </div>
       </div>
     </>
