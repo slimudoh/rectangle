@@ -6,12 +6,14 @@ $sidebarColor: #24292e;
 $bannerColor: #ddd;
 $deviceColor: #fff;
 $footerColor: #eee;
+$deviceLoaderColor: #24292e;
 $debugger: 1px dotted red;
 
 .header {
   position: fixed;
   top: 0;
   width: 100%;
+  min-width: 1200px;
   height: 50px;
   padding: 0 10px;
   background-color: $headerColor;
@@ -45,6 +47,56 @@ $debugger: 1px dotted red;
         outline: 0;
         color: #fff;
         font-size: 14px;
+      }
+    }
+  }
+
+  >.header__error {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    overflow: auto;
+
+    >.header__error--cover {
+      max-width: 400px;
+      padding: 10px;
+      margin: 100px auto;
+
+      >.header__error--modal {
+        padding: 20px 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: center;
+
+        >span {
+          color: #000;
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        >p {
+          margin: 10px 0;
+          color: #000;
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        >div {
+          width: 100px;
+          padding: 12px 0;
+          text-align: center;
+          margin: 5px auto 0 auto;
+          font-size: 14px;
+          background: #24292e;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -98,6 +150,102 @@ $debugger: 1px dotted red;
     border: 1px solid #ccc;
     margin-bottom: 10px;
   }
+
+  >.sidebar__about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    overflow: auto;
+
+    >.sidebar__about--cover {
+      max-width: 800px;
+      padding: 10px;
+      margin: 100px auto;
+
+      >.sidebar__about--modal {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: center;
+
+        >p {
+          text-align: right;
+          margin: 0;
+
+          >span {
+            font-size: 14px;
+            cursor: pointer;
+          }
+
+
+        }
+
+        >span {
+          font-size: 20px;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.18;
+          letter-spacing: normal;
+          text-align: center;
+          color: #24292e;
+        }
+
+        >div {
+          >p {
+            font-size: 14px;
+            font-weight: 200;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.46;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+
+            >span {
+              color: red;
+            }
+
+            >a {
+              color: #000;
+              text-decoration: underline;
+              font-weight: 600;
+            }
+          }
+
+          >span {
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.86;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+
+            >a {
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: 300;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 2.86;
+              letter-spacing: normal;
+              text-align: center;
+              color: #777777;
+
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -115,6 +263,21 @@ $debugger: 1px dotted red;
 
   >.container__content {
     overflow: hidden;
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.container__phone {
+  display: none;
+  padding-left: 80px;
+  padding-right: 20px;
+  padding-top: 80px;
+
+  @media (max-width: 1200px) {
+    display: block;
   }
 }
 
@@ -147,19 +310,25 @@ $debugger: 1px dotted red;
     color: #fff;
     font-size: 12px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
 
     >.device__info--name {
-      width: 60%;
+      width: 33.333333%;
       text-align: left;
+      font-size: 12px;
+    }
+
+    >.device__info--orientation {
+      width: 33.333333%;
+      text-align: center;
     }
 
     >.device__info--dimension {
-      width: 40%;
+      width: 33.333333%;
       text-align: right;
     }
   }
@@ -177,6 +346,32 @@ $debugger: 1px dotted red;
       >.device__phone--screen {
         background-color: #fff;
         overflow: hidden;
+        position: relative;
+
+        >.device__loader {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background: #fff;
+          padding-top: 20px;
+
+          >div {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin: auto;
+            border-top: 5px solid $deviceLoaderColor;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $deviceLoaderColor;
+            border-left: 5px solid $deviceLoaderColor;
+            animation: loader .3s linear infinite;
+            -moz-animation: loader .3s linear infinite;
+            -o-animation: loader .3s linear infinite;
+            -webkit-animation: loader .3s linear infinite;
+          }
+        }
       }
     }
   }
@@ -202,5 +397,46 @@ body {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

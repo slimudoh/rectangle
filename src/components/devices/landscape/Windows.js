@@ -1,18 +1,19 @@
 import React from "react";
 import Device from "../../content/Device";
-import windowsDetailsPortrait from "../../../util/portrait/windows";
+import windowsDetailsLandscape from "../../../util/landscape/windows";
 
-function WindowsPortrait(props) {
+function WindowsLandscape(props) {
   return (
     <div className="phones">
       <div className="phones__container">
-        {windowsDetailsPortrait.map((item, index) => (
+        {windowsDetailsLandscape.map((item, index) => (
           <Device
             dimensions={item.dimensions}
             orientation={item.orientation}
             name={item.name}
             size={item.size}
             key={index}
+            index={index}
             url={props.url}
           />
         ))}
@@ -21,4 +22,4 @@ function WindowsPortrait(props) {
   );
 }
 
-export default WindowsPortrait;
+export default WindowsLandscape;
