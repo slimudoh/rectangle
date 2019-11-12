@@ -1,11 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 function Device(props) {
-  const iframeElement = useRef(null);
+  const loaderElement = useRef(null);
+
+  useEffect(() => {
+    loaderElement.current.style.display = "none";
+
+    if (props.url) {
+      loaderElement.current.style.display = "block";
+    }
+  });
 
   const frameOnLoad = () => {
-    console.log(iframeElement.current);
-    console.log("hello");
+    loaderElement.current.style.display = "none";
   };
 
   return (
@@ -18,6 +25,7 @@ function Device(props) {
     >
       <div className="device__info">
         <div className="device__info--name">{props.name}</div>
+        <div className="device__info--orientation">{props.orientation}</div>
         <div className="device__info--dimension">{props.size}</div>
       </div>
       <div className="device__phone">
@@ -38,12 +46,15 @@ function Device(props) {
             <iframe
               onLoad={frameOnLoad}
               title="myDevice"
-              src=""
+              src={props.url}
               style={{
                 width: props.dimensions.screenWidth,
                 height: props.dimensions.screenHeight
               }}
             ></iframe>
+            <div className="device__loader" ref={loaderElement}>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
