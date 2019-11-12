@@ -19,8 +19,7 @@ function Device(props) {
     <div
       className="device"
       style={{
-        width: props.dimensions.screenWidth,
-        height: props.dimensions.screenHeight
+        width: props.dimensions.screenWidth
       }}
     >
       <div className="device__info">
@@ -29,17 +28,10 @@ function Device(props) {
         <div className="device__info--dimension">{props.size}</div>
       </div>
       <div className="device__phone">
-        <div
-          className="device__phone--device"
-          style={{
-            width: props.dimensions.deviceWidth,
-            height: props.dimensions.deviceHeight
-          }}
-        >
+        <div className="device__phone--device">
           <div
             className="device__phone--screen"
             style={{
-              width: props.dimensions.screenWidth,
               height: props.dimensions.screenHeight
             }}
           >
