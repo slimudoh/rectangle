@@ -26,7 +26,7 @@ function Header(props) {
 
   return (
     <div className="header">
-      <div className="header__logo">RECTANGLE</div>
+      <div className="header__logo">RECT-ANGLE</div>
       <div className="header__search">
         <form onSubmit={getUrl}>
           <input
