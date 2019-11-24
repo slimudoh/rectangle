@@ -1,27 +1,23 @@
 import React, { useState, useRef } from "react";
 
 function Header(props) {
-  const [err, setErr] = useState(false);
   const iframeUrl = useRef(null);
 
   const getUrl = e => {
     e.preventDefault();
     const inputValue = iframeUrl.current.value;
-    const securedHttp = "https://";
-    const insecuredHttp = "http://";
-    if (
-      inputValue.trim().includes(securedHttp) ||
-      inputValue.trim().includes(insecuredHttp)
-    ) {
-      props.getFormUrl(inputValue);
-      return;
+
+    let url = inputValue.trim();
+
+    if (!inputValue.includes("www")) {
+      url = "www." + inputValue.trim();
     }
 
-    setErr(true);
-  };
+    if (!inputValue.includes("http")) {
+      url = "http://" + url;
+    }
 
-  const closeErr = () => {
-    setErr(false);
+    props.getFormUrl(url);
   };
 
   return (
@@ -36,20 +32,6 @@ function Header(props) {
           />
         </form>
       </div>
-      {err ? (
-        <div className="header__error">
-          <div className="header__error--cover">
-            <div className="header__error--modal">
-              <span>Alert</span>
-              <p>
-                Url link must begin with http or https. It must have the full
-                path to access the application.
-              </p>
-              <div onClick={closeErr}>OK</div>
-            </div>
-          </div>
-        </div>
-      ) : null}
     </div>
   );
 }
