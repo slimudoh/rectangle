@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 
 function Header(props) {
   const iframeUrl = useRef(null);
