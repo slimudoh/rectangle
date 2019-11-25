@@ -1,19 +1,32 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 
 function Header(props) {
+  const [modal, setModal] = useState(false);
+  const [confrimText, setConfirmText] = useState("");
   const iframeUrl = useRef(null);
 
   const getUrl = e => {
     e.preventDefault();
-    const inputValue = iframeUrl.current.value;
+    let inputValue = iframeUrl.current;
 
-    let url = inputValue.trim();
+    let url = inputValue.value.trim();
 
-    if (!inputValue.includes("http")) {
+    if (!inputValue.value.includes("http")) {
       url = "http://" + url;
     }
 
+    setConfirmText(url);
+    setModal(true);
+  };
+
+  const proceed = () => {
     props.getFormUrl(url);
+    setModal(false);
+    inputValue.value = "";
+  };
+
+  const close = () => {
+    setModal(false);
   };
 
   return (
@@ -28,6 +41,24 @@ function Header(props) {
           />
         </form>
       </div>
+      {modal ? (
+        <div className="header__error">
+          <div className="header__error--cover">
+            <div className="header__error--modal">
+              <span>Alert</span>
+              <p>
+                You are about to access the link <span>{confrimText}</span>{" "}
+                across multiple frames. click on proceed or cancel the
+                operation.
+              </p>
+              <div>
+                <div onClick={proceed}>Procees</div>
+                <div onClick={close}>Cancel</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
