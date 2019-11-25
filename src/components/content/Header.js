@@ -9,12 +9,8 @@ function Header(props) {
 
     let url = inputValue.trim();
 
-    if (!inputValue.includes("www")) {
-      url = "www." + inputValue.trim();
-    }
-
-    if (!inputValue.includes("https")) {
-      url = "https://" + url;
+    if (!inputValue.includes("http")) {
+      url = "http://" + url;
     }
 
     props.getFormUrl(url);
