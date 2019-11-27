@@ -8,7 +8,6 @@ function Header(props) {
   const getUrl = e => {
     e.preventDefault();
     let inputValue = iframeUrl.current;
-
     let url = inputValue.value.trim();
 
     if (!inputValue.value.includes("http")) {
@@ -20,7 +19,8 @@ function Header(props) {
   };
 
   const proceed = () => {
-    props.getFormUrl(url);
+    let inputValue = iframeUrl.current;
+    props.getFormUrl(confrimText);
     setModal(false);
     inputValue.value = "";
   };
