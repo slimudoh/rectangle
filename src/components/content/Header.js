@@ -11,7 +11,7 @@ function Header(props) {
     let url = inputValue.value.trim();
 
     if (!inputValue.value.includes("http")) {
-      url = "https://" + url;
+      url = "http://" + url;
     }
 
     setConfirmText(url);
