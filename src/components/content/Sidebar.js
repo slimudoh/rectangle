@@ -113,7 +113,7 @@ function Sidebar(props) {
                 <p>
                   This application is developed for the purpose of testing the
                   responsiveness of user interface of web applications across
-                  different devices which are not physical present. These
+                  different devices which are not physically present. These
                   applications includes those in development and on production.
                   <br />
                   <br />
@@ -140,8 +140,8 @@ function Sidebar(props) {
                   <br />
                   <br />
                   The project was created my Uwem Micheal Udoh, a software
-                  developer with Rovedana Limited. For issues, comments or
-                  suggestions, You can reach me on{" "}
+                  developer from Nigeria. For issues, comments or suggestions,
+                  You can reach me on{" "}
                   <a
                     href="https://twitter.com/slimudoh"
                     target="_blank"

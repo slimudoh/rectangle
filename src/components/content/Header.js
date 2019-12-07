@@ -1,26 +1,32 @@
 import React, { useState, useRef } from "react";
 
 function Header(props) {
-  const [err, setErr] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [confrimText, setConfirmText] = useState("");
   const iframeUrl = useRef(null);
 
   const getUrl = e => {
     e.preventDefault();
     let inputValue = iframeUrl.current;
-
     let url = inputValue.value.trim();
 
     if (!inputValue.value.includes("http")) {
-      url = "http://" + url;
+      url = "https://" + url;
     }
 
-    props.getFormUrl(url);
-    setErr(true);
+    setConfirmText(url);
+    setModal(true);
+  };
+
+  const proceed = () => {
+    let inputValue = iframeUrl.current;
+    props.getFormUrl(confrimText);
+    setModal(false);
     inputValue.value = "";
   };
 
-  const closeErr = () => {
-    setErr(false);
+  const close = () => {
+    setModal(false);
   };
 
   return (
@@ -35,16 +41,28 @@ function Header(props) {
           />
         </form>
       </div>
-      {err ? (
+      {modal ? (
         <div className="header__error">
           <div className="header__error--cover">
             <div className="header__error--modal">
-              <span>Alert</span>
+              <h3>Alert</h3>
               <p>
-                Url link must begin with http or https. It must have the full
-                path to access the application.
+                You are about to access the link <span>{confrimText}</span>{" "}
+                across multiple frames which might take a while to load. click
+                on proceed or cancel the operation.
               </p>
-              <div onClick={closeErr}>OK</div>
+
+              <span>
+                Please note that displaying websites that sends an
+                "X-Frame-Options: SAMEORIGIN" response header will not work.
+                This option prevents the containers from displaying the website.
+                This tool is for testing purposes and for only applications you
+                know about.
+              </span>
+              <div>
+                <div onClick={proceed}>Procees</div>
+                <div onClick={close}>Cancel</div>
+              </div>
             </div>
           </div>
         </div>
