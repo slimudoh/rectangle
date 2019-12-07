@@ -140,8 +140,8 @@ function Sidebar(props) {
                   <br />
                   <br />
                   The project was created my Uwem Micheal Udoh, a software
-                  developer with Rovedana Limited. For issues, comments or
-                  suggestions, You can reach me on{" "}
+                  developer from Nigeria. For issues, comments or suggestions,
+                  You can reach me on{" "}
                   <a
                     href="https://twitter.com/slimudoh"
                     target="_blank"

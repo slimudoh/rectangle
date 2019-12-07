@@ -45,12 +45,20 @@ function Header(props) {
         <div className="header__error">
           <div className="header__error--cover">
             <div className="header__error--modal">
-              <span>Alert</span>
+              <h3>Alert</h3>
               <p>
                 You are about to access the link <span>{confrimText}</span>{" "}
-                across multiple frames. click on proceed or cancel the
-                operation.
+                across multiple frames which might take a while to load. click
+                on proceed or cancel the operation.
               </p>
+
+              <span>
+                Please note that displaying websites that sends an
+                "X-Frame-Options: SAMEORIGIN" response header will not work.
+                This option prevents the containers from displaying the website.
+                This tool is for testing purposes and for only applications you
+                know about.
+              </span>
               <div>
                 <div onClick={proceed}>Procees</div>
                 <div onClick={close}>Cancel</div>
