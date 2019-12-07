@@ -113,7 +113,7 @@ function Sidebar(props) {
                 <p>
                   This application is developed for the purpose of testing the
                   responsiveness of user interface of web applications across
-                  different devices which are not physical present. These
+                  different devices which are not physically present. These
                   applications includes those in development and on production.
                   <br />
                   <br />
