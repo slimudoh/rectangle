@@ -393,6 +393,11 @@ $debugger: 1px dotted red;
             -o-animation: loader .3s linear infinite;
             -webkit-animation: loader .3s linear infinite;
           }
+
+          >p {
+            text-align: center;
+            font-size: 14px;
+          }
         }
       }
     }
