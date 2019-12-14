@@ -11,7 +11,7 @@ function Header(props) {
     let url = inputValue.value.trim();
 
     if (!inputValue.value.includes("http")) {
-      url = "https://" + url;
+      url = "//" + url;
     }
 
     setConfirmText(url);
@@ -19,10 +19,10 @@ function Header(props) {
   };
 
   const proceed = () => {
-    let inputValue = iframeUrl.current;
+    // let inputValue = iframeUrl.current;
     props.getFormUrl(confrimText);
     setModal(false);
-    inputValue.value = "";
+    // inputValue.value = "";
   };
 
   const close = () => {
@@ -46,11 +46,11 @@ function Header(props) {
           <div className="header__error--cover">
             <div className="header__error--modal">
               <h3>Alert</h3>
-              <p>
+              {/* <p>
                 You are about to access the link <span>{confrimText}</span>{" "}
                 across multiple frames which might take a while to load. click
                 on proceed or cancel the operation.
-              </p>
+              </p> */}
 
               <span>
                 Please note that displaying websites that sends an
