@@ -11,8 +11,14 @@ function Device(props) {
     }
   });
 
-  const frameOnLoad = () => {
+  const frameOnLoad = event => {
     loaderElement.current.style.display = "none";
+    const isLoaded = event.target.contentWindow.window.length;
+
+    if (isLoaded === 0) {
+      loaderElement.current.style.display = "none";
+      return;
+    }
   };
 
   return (
@@ -44,8 +50,10 @@ function Device(props) {
                 height: props.dimensions.screenHeight
               }}
             ></iframe>
+
             <div className="device__loader" ref={loaderElement}>
               <div></div>
+              <p>Fetching content for this frame</p>
             </div>
           </div>
         </div>
