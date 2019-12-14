@@ -50,6 +50,7 @@ function Device(props) {
                 height: props.dimensions.screenHeight
               }}
             ></iframe>
+
             <div className="device__loader" ref={loaderElement}>
               <div></div>
               <p>Fetching content for this frame</p>
