@@ -8,13 +8,6 @@ function Header(props) {
     let inputValue = iframeUrl.current;
     let url = inputValue.value.trim();
 
-    if (
-      !inputValue.value.includes("http://") &&
-      !inputValue.value.includes("https://")
-    ) {
-      url = "http://" + url;
-    }
-
     props.getFormUrl(url);
   };
 
