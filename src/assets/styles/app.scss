@@ -393,6 +393,36 @@ $debugger: 1px dotted red;
             -o-animation: loader .3s linear infinite;
             -webkit-animation: loader .3s linear infinite;
           }
+
+          >p {
+            text-align: center;
+            font-size: 14px;
+          }
+        }
+
+        >.device__error {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background: #fff;
+          padding-top: 20px;
+          text-align: center;
+
+          >span {
+            color: red;
+            font-size: 18px;
+          }
+
+
+          >p {
+            text-align: center;
+            font-size: 14px;
+            padding: 0 20px;
+            line-height: 1.5;
+
+          }
         }
       }
     }

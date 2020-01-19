@@ -6,16 +6,7 @@ function WindowsPortrait(props) {
   return (
     <div className="phones">
       <div className="phones__container">
-        {windowsDetailsPortrait.map((item, index) => (
-          <Device
-            dimensions={item.dimensions}
-            orientation={item.orientation}
-            name={item.name}
-            size={item.size}
-            key={index}
-            url={props.url}
-          />
-        ))}
+        <Device details={windowsDetailsPortrait} url={props.url} />
       </div>
     </div>
   );
