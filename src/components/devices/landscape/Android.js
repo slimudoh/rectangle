@@ -6,17 +6,7 @@ function AndroidLandscape(props) {
   return (
     <div className="phones">
       <div className="phones__container">
-        {androidDetailsLandscape.map((item, index) => (
-          <Device
-            dimensions={item.dimensions}
-            orientation={item.orientation}
-            name={item.name}
-            size={item.size}
-            key={index}
-            index={index}
-            url={props.url}
-          />
-        ))}
+        <Device details={androidDetailsLandscape} url={props.url} />
       </div>
     </div>
   );
